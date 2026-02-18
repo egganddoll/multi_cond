@@ -2,15 +2,35 @@
 This is a readme for the documentation of the phase-field simulation model. Running this code requires 
 pre-requisites (below) and  recommended to be run in a separate conda environment
 
-### Requirements for Code
-- python (>=3.7)
-- numpy
-- numexpr
-- moviepy
-- matplotlib
+### Installation
 
-### How to run code
-The code can be run by running run_pfsim.py with input and output flags
+If using uv, code can be run with
+
+`` uv run run_pfsim --flag_name flag_params ``
+
+For a simple example, run
+
+`` uv run run_pfsim --i Input/input_params.txt --o Output/ ``
+
+If using pip for package management, first create a new virtual environment. Either use 
+
+```
+conda create -n multi_cond
+conda activate multi_cond
+```
+
+or 
+
+```
+python -m venv .venv
+source .venv/bin/activate
+```
+
+These environments will need to be activated each time the code is used. To install requirements, run
+
+`` pip install -e . ``
+
+Code can then be ran with
 
 `` python run_pfsim --flag_name flag_params ``
 
@@ -21,7 +41,6 @@ Input parameters (example provided along with the code under /Input/input_params
 
 `` --o /path/to/output_folder/ ``
 Path to output folder
-
 
 #### Optional flags
 
